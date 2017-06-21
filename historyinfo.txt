@@ -1,0 +1,69 @@
+Just some helpful info pasted from the forum:
+
+
+Thanks ... and yeah. Average riverbed level rises too in higher terrains.
+--------------------------------------------------------------------------
+
+Another tip PERSISTENCE1 = 0.6 for rivers that snake and meander more.
+--------------------------------------------------------------------------
+
+*by jojoa1997 » Tue Mar 05, 2013 20:04
+could you make a mod that adds rivers. canyons but they are at ground level
+
+ by paramat » Tue Mar 05, 2013 22:27
+Like chasm mod but with rivers at the bottom of the chasms? yeah that is possible.
+I rely on donations to help provide an income https://forum.minetest.net/viewtopic.php?f=3&t=14935
+ 
+ by jojoa1997 » Tue Mar 05, 2013 22:30
+no i mean just place a river on the ground. only 1-5 blocks deep
+
+ by paramat » Thu Mar 07, 2013 06:51
+This mod will do that, set WATFAC = 0, MINDEP = 1, MAXDEP = 5.
+--------------------------------------------------------------------------
+
+*by Zedm0n » Thu Mar 28, 2013 13:52
+After hours of experimenting I have the setting that I like. These parameters will generate rivers just broad enough to cut down on block falling bugs and canyons shallow enough to be (somewhat) realistic riverbeds. It reminds me of many a river in Colorago, Arkansas, Texas, and Califonia.
+
+Code: Select all
+    local WATFAC = 0.75
+    local MINDEP = 5
+    local MAXDEP = 5
+    local NOISEL = -0.09
+
+
+
+All other parameters are left at default.
+-----------------------------------------------------------------------------
+
+*by Zedm0n » Thu Mar 28, 2013 11:48
+Which parameter governs canyon depth?
+
+ by paramat » Fri Mar 29, 2013 01:04
+WATFAC controls the distance from water surface to the top of surrounding cliffs.
+WATFAC = 0 ... rivers at sea level, deep canyons.
+WATFAC = 0.95 ... rivers just below land surface.
+------------------------------------------------------------------------------
+
+*by paramat » Tue Jul 30, 2013 23:11
+I'm revisiting this mod, version 0.3.1 will have the water factor parameter varied by a large scale perlin noise in such a way that large areas of the map will be either rivers at sea level in deep canyons, or rivers that remain just below land surface level (everything inbetween too in a smooth transition).
+
+In 0.4.7 the chunks generate in a few seconds, almost fast enough to keep up with flying fast through the canyons with noclip ... this is huge fun i recommend trying it. Because of the generation speed i feel this is my most successful mod in certain ways.
+--------------------------------------------------------------------------------
+
+*by paramat » Sat Nov 23, 2013 15:03
+Yes i now remember seeing that in the documentation, i'm not sure how that's coded, however i actually think my river gen is better, the rivers are wider and actually travel long distance, if you compare with my large map posted above.
+Last edited by paramat on Sat Nov 23, 2013 
+---------------------------------------------------------------------------------
+
+*by paramat » Thu Jan 08, 2015 07:38
+0.4.1
+Added turquoise freshwater, see first post for details and a new screenshot.
+The freshwater nodes are placed below sea level, you can see the freshwater colour winding across lakes, this is less realistic but perhaps more fun, what do you think? Maybe i'll make that an option.
+Some code improvements for more speed and less memory usage, learnt from recent chats on IRC with hmmmm.
+----------------------------------------------------------------------------------
+
+*by paramat » Tue Mar 21, 2017 23:20
+I am no longer interested in maintaining this mod and intend to delete my repo in a month, if anyone is interested in this mod please fork it or copy it now.
+
+(The dark shadows should now be fixed.)
+
