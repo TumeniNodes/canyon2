@@ -5,8 +5,8 @@ local WAFAV = 0.2 -- Water factor average
 local WAFAMP = 0.1 -- Water factor amplitude
 local MINDEP = 5 -- (0-30) Minimum river depth
 local MAXDEP = 7 -- (0-30) Maximum river depth
-local TRIVERL = -0.15 -- width
-local TRIVERH = 0.10 -- bank slope
+local TRIVERL = -0.15 
+local TRIVERH = 0.10 
 
 -- 2D noise for river channel
 
